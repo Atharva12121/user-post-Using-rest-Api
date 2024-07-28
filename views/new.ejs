@@ -1,0 +1,23 @@
+<%- include("../include/head.ejs"); %>
+
+    <body class="p-3 mb-2 bg-info-subtle text-info-emphasis">
+        <h1> <i>Add New Post</i></h1>
+        <form action="/posts" method="post">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">@</span>
+                <input type="text" class="form-control" placeholder=" Enter Username" aria-label="Username" aria-describedby="addon-wrapping" name="username">
+            </div>
+            <br><br>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Enter Content" id="floatingTextarea2" style="height: 100px" name="Content"></textarea>
+                <label for="floatingTextarea2">Comments</label>
+            </div>
+            <br><br>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary">Submit post</button>
+            </div>
+
+        </form>
+    </body>
+
+    </html>

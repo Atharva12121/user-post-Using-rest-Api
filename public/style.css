@@ -1,0 +1,27 @@
+* {
+    text-align: center;
+}
+
+.block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#cards-here {
+    margin: 20px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn {
+    margin-left: 10px;
+}
+
+#show {
+    height: 18rem;
+    width: 20rem;
+}

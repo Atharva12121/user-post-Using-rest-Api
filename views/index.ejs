@@ -1,0 +1,32 @@
+<%- include("../include/head.ejs"); %>
+
+    <body class="p-3 mb-2 bg-info-subtle text-info-emphasis">
+        <h1> <i>Post</i></h1>
+        <marquee behavior="" direction="right" class="p-3 mb-2 bg-primary-subtle text-primary-emphasis rounded-pill">Here You Want To Post Anything Which you Want</marquee>
+        <div class="flex">
+            <% for(let post of posts){ %>
+                <div class="card p-3 mb-2 bg-primary-subtle text-primary-emphasis border border border-dark-subtle border border-3 rounded-4 " id="cards-here" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">@
+                            <%= post.username %>
+                        </h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">
+                            <%=post.Content%>
+                        </h6>
+                        <div class="block">
+                            <a href="/posts/<%=post.id%>" class="card-link ">View in detail</a>
+                            <a href="/posts/<%=post.id%>/edit" class="card-link">Edit</a>
+                            <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                                <button onclick="location.href='/posts/new'" class="btn btn-outline-secondary btn">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+        <hr>
+        <br>
+        <input type="button" onclick="location.href='/posts/new'" value="Add post" class="btn btn-outline-primary">
+    </body>
+
+    </html>

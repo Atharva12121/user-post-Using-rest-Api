@@ -1,0 +1,26 @@
+<%- include("../include/head.ejs"); %>
+
+    <body class="p-3 mb-2 bg-info-subtle text-info-emphasis">
+        <h1> <i>Edit Post</i></h1>
+        <p> <mark> <i>Post Id: </i><b><%=post.id%></b>  </mark>
+        </p>
+        <div class="post">
+            <h2 class="user">@
+                <%= post.username %>
+            </h2>
+            <form action="/posts/<%=post.id%>?_method=PATCH" method="post">
+                <br>
+                <br>
+                <div class="form-floating">
+                    <textarea class="form-control" id="floatingTextarea2" style="height: 100px" name="Content"><%=post.Content%></textarea>
+                    <label for="floatingTextarea2">Comments</label>
+                </div>
+                <br><br><br>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+
+    </html>
