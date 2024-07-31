@@ -47,13 +47,14 @@ app.post("/posts", (req, res) => {
 });
 app.get("/posts/:id", (req, res) => {
     let { id } = req.params;
-    let post = posts.find((p) => p.id == id);
+    let post = posts.find((p) => p.id === id);
     res.render("show.ejs", { post });
 
 });
 
 app.patch("/posts/:id", (req, res) => {
     let { id } = req.params;
+    let newContent = req.body.Content;
     post.Content = newContent;
     let post = posts.find((p) => id == p.id);
     newContent = req.body.Content;
